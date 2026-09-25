@@ -176,7 +176,7 @@ function render(){
     f.push(i);
   }
   document.getElementById('tot').textContent=f.length;
-  document.getElementById('rc').textContent=f.length+' risultati';
+  var rcEl=document.getElementById('rc');if(rcEl)rcEl.textContent=f.length+' risultati';
   var grid=document.getElementById('grid');
   var cards=grid.querySelectorAll('.card');
   for(var k=0;k<cards.length;k++)cards[k].remove();
